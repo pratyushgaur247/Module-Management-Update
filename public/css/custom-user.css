@@ -1,0 +1,37 @@
+.c-sidebar {
+    background: #404e67;
+}
+.c-sidebar-nav {
+    background: #38445a;
+}
+.c-sidebar .c-sidebar-nav-link.c-active,
+.c-sidebar .c-sidebar-nav-link:hover,
+.c-sidebar-nav-dropdown-toggle:hover {
+    background: #2e3950;
+}
+.c-sidebar .c-sidebar-nav-dropdown.c-show{
+    background: rgb(46 57 80);
+}
+
+
+/*.custom-card{
+	position: relative;
+	box-shadow: none;
+}
+.custom-card:before {
+    background: #ffffffc7;
+    box-shadow: 0 3px 20px rgb(0 0 0 / 4%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 92%;
+    margin: auto;
+    height: 10px;
+    bottom: -10px;
+    border-radius: 0 0 6px 6px;
+}
+.custom-card:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 10px 10px -5px rgb(0 0 0 / 4%); 
+    transition: 0.5s ease-in-out;
+}*/

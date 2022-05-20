@@ -1,0 +1,268 @@
+.topbar {
+    position: absolute;
+    z-index: 9;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+    top: 0;
+    border-bottom: 1px solid #fff;
+    padding: 10px 15px;
+}
+
+.topbar-right a {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.hide {
+    display: none;
+}
+.hide-mobile{
+    display: none !important;
+}
+.header_nav {
+    width: 100%;
+    z-index: 99;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    background: #383737;
+    padding: 0;
+}
+
+.header_nav .nav-link {
+    color: #fff;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin: 0 10px;
+    position: relative;;
+}
+.header_sec .nav-item:last-child .nav-link {
+    margin-right: 0;
+}
+
+.header_nav .nav-link::before {
+    background: #E91E63;
+    transform-origin: 100% 50%;
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    transition: 0.5s transform ease;
+    transform: scale3d(0,1,1);
+    transform-origin: 0 50%;
+}
+.header_nav .nav-link:hover::before {
+    transform-origin: 0 50%;
+    transform: scale3d(1,1,1);
+}
+
+
+
+.header_sec .nav-item {
+    list-style: none;
+}
+
+ul.mb-0.sign-in-up {
+    display: flex;
+}
+
+.navbar-brand {
+    margin: 0;
+}
+
+.header-home .header_nav {
+    position: absolute;
+    background: transparent;
+}
+.header-home .header_nav.fixed-top{
+    position: fixed;
+    background: #000000c7;
+    border: 0;
+    box-shadow: 0px 8px 13px -2px #ffffff26;
+    animation: smoothScroll 1s forwards;
+}
+
+.bgimg {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.bgimg:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000000ad;
+}
+
+button.navbar-toggler {
+    color: #fff;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-brand .logo {
+    width: 130px;
+    padding: 5px 0;
+}
+
+.profile-right {
+    position: relative;
+}
+
+.profile-menu {
+    cursor: pointer;
+}
+.profile-name {
+    padding-left: 15px;
+}
+.profile-menu img {
+    width: 28px;
+}
+
+.navbar-toggler-icon {
+    width: auto;
+    height: auto;
+    padding: 10px 12px;
+    border-radius: 4px;
+    background: #d52027;
+}
+
+.profile-dropdown {
+    position: absolute;
+    background: #ccc;
+    width: 160px;
+    right: 0;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+}
+
+.profile-dropdown li:first-child,
+.profile-dropdown li:last-child {
+    background: #f1f1f1;
+    color: #636363;
+    padding: 7px 20px;
+    border-radius: 4px 4px 0 0;
+}
+
+.profile-dropdown li:last-child {
+    border-radius: 0 0 4px 4px;
+    border-top: 1px solid #eaeaea;
+}
+
+.profile-dropdown a {
+    color: #636363;
+    background: #fff;
+    padding: 10px 20px;
+    border-top: 1px solid #eaeaea;
+    display: block;
+}
+
+.profile-dropdown li:last-child {
+    background: #fff;
+}
+
+.profile-dropdown a i,
+.profile-dropdown li:last-child i {
+    margin-right: 8px;
+    width: 18px;
+}
+
+.profile-dropdown li:last-child a {
+    border: 0;
+    /*padding: 0;*/
+}
+
+.hide-desktop {
+    display: none;
+}
+.dropdown-list:hover{
+    text-decoration: none;
+    color: #455164;
+    background-color: #ebedef;
+}
+
+@media (max-width: 767px){
+.navbar-collapse {
+    position: absolute;
+    width: calc(100% - 30px);
+    top: 70px;
+    padding: 0;
+    left: 15px;
+    right: -15px;
+}
+.navbar-brand .logo {
+    width: 100px;
+}
+.navbar-collapse ul.navbar-nav {
+    width: 100%;
+}
+.navbar-collapse.notlogin {
+    left: auto;
+    right: 15px;
+}
+.navbar-collapse:after {
+    position: absolute;
+    bottom: 100%;
+    border: 0.8rem solid #e6181800;
+    border-bottom-color: #fff;
+    display: block;
+    content: "";
+    top: -26px;
+    transform: translateX(-50%);
+    z-index: 9;
+    left: 20px;
+}
+.navbar-collapse.notlogin:after {
+    left: auto;
+    right: -4px;
+}
+
+.header_nav .nav-link {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    border-top: 1px solid #eaeaea;
+    color: #636363;
+    background: #fff;
+    margin: 0;
+}
+.profile-name span {
+    display: none; 
+}
+
+.container.navbar-container {
+    padding: 0 15px;
+}
+.navbar-toggler {
+    min-width: 33%;
+    text-align: left;
+}
+.navbar-brand {
+    min-width: 33%;
+    text-align: center;
+}
+.profile-right {
+    margin-left: 0;
+    width: 25%;
+    display: flex;
+    justify-content: end;
+}
+
+
+
+}
+
+@media (max-width: 575px){
+.navbar-collapse {
+    right: 15px;
+}
+}

@@ -1,0 +1,164 @@
+@media (max-width: 1199px){
+.result-item .btn-medium {
+    min-width: 84px;
+}
+}
+
+@media (max-width: 991px){
+section.common-sec1 {
+    /*padding-top: 100px;*/
+}
+.home1-box {
+    padding: 15px 15px;
+    /*height: 200px;*/
+}
+.two-btns .btn {
+    margin-top: 10px;
+}
+.result-item .btn-medium {
+    min-width: 100px;
+}
+
+
+}
+
+@media (max-width: 768px){
+section.common-sec1 {
+    min-height: 70vh;
+}
+
+
+}
+
+
+
+@media (max-width: 767px){
+.moneyimg {
+    width: 130px;
+}
+.begin-search {
+    margin-bottom: 180px;
+}
+.product-sec1-right {
+    padding: 30px 0px 0;
+}
+.PolyPropolene-right {
+    margin-top: 30px;
+}
+
+.hide-mobile{
+    display: none !important;
+}
+/* ------- header css ------- */
+/*.navbar-collapse {
+    position: absolute;
+    width: calc(100% - 30px);
+    top: 70px;
+    padding: 0;
+    left: 15px;
+}
+.navbar-collapse.notlogin {
+    left: auto;
+    right: 15px;
+}
+.navbar-collapse:after {
+    position: absolute;
+    bottom: 100%;
+    border: 0.8rem solid #e6181800;
+    border-bottom-color: #fff;
+    display: block;
+    content: "";
+    top: -26px;
+    transform: translateX(-50%);
+    z-index: 9;
+    left: 20px;
+}
+.navbar-collapse.notlogin:after {
+    left: auto;
+    right: -4px;
+}
+
+.header_nav .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top: 1px solid #eaeaea;
+    color: #636363;
+    background: #fff;
+}
+.profile-name span {
+    display: none; 
+}
+
+
+
+.container.navbar-container {
+    padding: 0 15px;
+}
+.navbar-toggler {
+    min-width: 33%;
+    text-align: left;
+}
+.navbar-brand {
+    min-width: 33%;
+    text-align: center;
+}*/
+
+.contact_sec1_left {
+    padding: 0;
+}
+.contact_info {
+    padding: 30px 0px;
+}
+.copyright {
+    margin-top: 0;
+}
+.policy-content {
+    padding: 30px 0;
+}
+/* ========= Checkout page css ========= */
+.single-product-sec1 .product-image img {
+    width: 100%;
+    max-height: auto;
+}
+.chk-detail {
+    height: auto;
+    margin-top: 20px;
+}
+.specification-sec {
+    padding: 40px 0;
+}
+.flip-container, .front, .back {
+    height: 330px;
+}
+/* ========= Checkout page css end ========= */
+.mt-5, .my-5 {
+    margin-top: 2rem!important;
+}
+.home1-box {
+    margin: 15px 10px;
+}
+.singlepro_sec1_left .carousel-item img {
+    max-height: unset;
+    width: 100%;
+}
+
+
+.review-carousel {
+    width: 90%;
+    margin: auto;
+}
+.review-carousel .owl-nav.disabled .owl-prev span{
+    left: -22px;
+}
+.review-carousel .owl-nav.disabled .owl-next span {
+    right: -22px;
+}
+.alert.alert-card.alert-success {
+    display: flex;
+    justify-content: space-between;
+}
+
+}
+
+
+

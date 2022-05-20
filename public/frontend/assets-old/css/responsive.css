@@ -1,0 +1,32 @@
+@media (max-width: 991px){
+section.common-sec1 {
+    padding-top: 100px;
+}
+.home1-box {
+    padding: 15px 15px;
+    height: 200px;
+}
+.two-btns .btn {
+    margin-top: 10px;
+}
+
+
+
+}
+
+@media (max-width: 767px){
+.moneyimg {
+    width: 130px;
+}
+.begin-search {
+    margin-bottom: 180px;
+}
+.PolyPropolene-sec {
+    padding: 30px 0px 0;
+}
+.PolyPropolene-right {
+    margin-top: 30px;
+}
+
+
+}

@@ -1,0 +1,726 @@
+@font-face{
+    src: url(../fonts/MYRIADPRO-REGULAR.otf);
+    font-family: MYRIADPRO-REGULAR;
+}
+@font-face{
+    src: url(../fonts/MYRIADPRO-SEMIBOLD.otf);
+    font-family: MYRIADPRO-SEMIBOLD;
+}
+@font-face{
+    src: url(../fonts/MYRIADPRO-BOLD.otf);
+    font-family: MYRIADPRO-BOLD;
+}
+@font-face {
+    src: url(../fonts/MyriadProBlack.otf);
+    font-family: MyriadProBlack;
+}
+
+@font-face {
+    src: url(../fonts/MyriadProBold.ttf);
+    font-family: MyriadProBold;
+}
+
+@font-face {
+    src: url(../fonts/MyriadProLight.otf);
+    font-family: MyriadProLight;
+}
+
+@font-face {
+    src: url(../fonts/MyriadProRegular.ttf);
+    font-family: MyriadProRegular;
+}
+
+
+
+/* lato-300 - latin */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/lato-v20-latin-300.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/lato-v20-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/lato-v20-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/lato-v20-latin-300.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/lato-v20-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/lato-v20-latin-300.svg#Lato') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* lato-regular - latin */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v20-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/lato-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/lato-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/lato-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/lato-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/lato-v20-latin-regular.svg#Lato') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* lato-700 - latin */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v20-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/lato-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/lato-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/lato-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/lato-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/lato-v20-latin-700.svg#Lato') format('svg');
+    /* Legacy iOS */
+}
+
+
+/* lato-900 - latin */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v20-latin-900.eot');
+    /* IE9 Compat Modes */
+    src: local(''), url('../fonts/lato-v20-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/lato-v20-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/lato-v20-latin-900.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/lato-v20-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/lato-v20-latin-900.svg#Lato') format('svg');
+    /* Legacy iOS */
+}
+
+
+section.login-signup-page {
+    /*height: 100vh;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*position: relative;*/
+}
+
+.login-sec {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px 20px;
+}
+.login-page-logo img {
+    width: 160px;
+    margin-bottom: 20px;
+}
+.login-sec p{
+    font-family: MYRIADPRO-REGULAR;
+}
+.login-sec p {
+    text-align: left;
+    color: #777;
+    font-size: 16px;
+}
+.heading-medium {
+    font-size: 26px;
+    font-family: 'Lato';
+    margin-bottom: 22px;
+    color: #000000;
+    text-align: center;
+}
+.login-sec .heading-medium{
+    margin-bottom: 3px;
+}
+:root{
+    --red: #d52027;
+}
+
+.login-box {
+    padding: 25px 30px;
+    background: #fff;
+    width: 100%;
+    /*max-width: 550px;*/
+    /*box-shadow: 0 0.5rem 1.5rem 0.5rem rgb(0 0 0 / 8%);*/
+    background: #1b1b1bb8;
+    border: 1px solid #1b1b1bb8;
+    border-radius: 8px;
+}
+.form-group label {
+    font-family: 'Lato';
+    color: #000;
+    /*color: var(--red);*/
+}
+.form-group .text-danger {
+    font-size: 14px;
+    font-family: 'Lato';
+}
+ .input-group .c-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px !important;
+    height: 100% !important;
+    z-index: 9;
+    color: #636363;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.form-group .input-group {
+    position: relative;
+    /*border: 2px solid #eaeaea;*/
+    /*border-radius: 4px;*/
+}
+.input-group .form-control {
+    border: 0;
+    background: transparent;
+}
+.input-group .form-control:focus {
+    /*border-color: #636363a6;*/
+    box-shadow: none;
+}
+.login-image img {
+    width: 100%;
+}
+.login-with {
+    align-items: center;
+    justify-content: space-between;
+}
+.btn.submit {
+    background: var(--red);
+    border: 0;
+    padding: 8px 20px;
+    font-family: 'Lato';
+    font-weight:600;
+    font-size: 18px;
+    border-radius: 4px;
+    color: #fff;
+}
+.btn.submit:hover{
+    color: #fff;
+    background: #a71318;
+    transition: .5s;
+}
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.dont a, .login-box .link {
+    color: var(--red);
+}
+.dont a:hover, .login-box .link:hover{
+    color: #a71318;
+}
+.color-red, .text-red{
+    color: #d52027;
+}
+.darkred:hover{
+    color: #a71318;
+}
+.bg-red{
+    background: #d52027;
+}
+.bg-darkred:hover{
+    background: #a71318;
+}
+.login-with .btn {
+    color: #fff;
+    font-family: 'Lato';
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+    padding: 9px;
+    max-width: 144px;
+}
+.login-with .fb {
+    background: #2b5c93;
+}
+.login-with .google {
+    background: #ed3739;
+}
+.login-sec .btn-primary {
+    padding: 10px;
+    font-family: 'Lato';
+    text-transform: uppercase;
+    letter-spacing: .2px;
+    background: #636363;
+    border: 0;
+}
+.login-sec .btn-primary:hover {
+    background: #3c4b64;
+}
+.login-sec a, .login-sec label {
+    font-family: 'Lato';
+}
+
+/* -------- Country state city loader css start -------- */
+.step2 .form-group{
+    position: relative;
+}
+/*Hidden class for adding and removing*/
+.step2 .lds-dual-ring.hidden {
+    display: none;
+}
+/*Add an overlay to the entire page blocking any further presses to buttons or other elements.*/
+.step2 .overlay {
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    opacity: 1;
+    transition: all 0.5s;
+}
+/*Spinner Styles*/
+.step2 .lds-dual-ring {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.step2 .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 5% auto;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* -------- Country state city loader css End -------- */
+
+
+
+
+section {
+    width: 100%;
+    /*background: #fff;*/
+}
+section.product-list-sec {
+    padding: 40px 0;
+}
+.pro-item p {
+    font-size: 16px;
+}
+.pro-item {
+    background: #fff;
+    box-shadow: #63636314 0px 2px 8px 0px;
+    margin: 15px 0;
+    /*padding: 20px;*/
+    position: relative;
+}
+.pro-item i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.pro-item .pro-view {
+    height: 300px;
+    position: relative;
+}
+.pro-item .proimg {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.pro-item .content {
+    /*text-align: center;*/
+    padding: 20px 15px;
+}
+.pro-item .title {
+    /* font-size: 18px; */
+    /* font-family: 'MYRIADPRO-SEMIBOLD'; */
+    /*margin: 10px 0 0px;*/
+    opacity: .9;
+}
+.pro-item p {
+    font-size: 16px;
+    font-family: 'MYRIADPRO-REGULAR';
+    text-align: left;
+    margin-bottom: 0;
+}
+.pro-item .price {
+    font-family: 'MYRIADPRO-SEMIBOLD';
+    /* margin: 7px 0 14px; */
+}
+.pro-item .price span {
+    color: #6fb582;
+    font-family: 'MYRIADPRO-REGULAR';
+    padding-left: 10px;
+    font-size: 13px;
+}
+.btn-medium {
+    display: inline-block;
+    background: #ffffff;
+    color: #3c4b64;
+    padding: 9px 20px;
+    border-radius: 102px;
+    font-family: 'MYRIADPRO-REGULAR';
+}
+.pro-item .btn-medium {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: max-content;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.pro-item:hover .btn-medium {
+    bottom: 18px;
+    opacity: 1;
+}
+.pro-item .btn-medium:hover {
+    background: #636363;
+    color: #fff;
+}
+
+/* ========= single product page css start ========= */
+section.single-product-sec1 {
+    background: #fff;
+    padding: 50px 0;
+    font-family: 'MYRIADPRO-REGULAR';
+}
+.single-product-desc .name {
+    font-family: 'MYRIADPRO-BOLD';
+    font-size: 28px;
+}
+.single-product-desc .price {
+    color: #3c4b64;
+    font-family: 'MYRIADPRO-BOLD';
+    font-size: 24px;
+}
+.single-product-desc .btn-medium {
+    background: #3c4b64;
+    color: #fff;
+}
+
+.form-control {
+    font-family: 'Lato';
+}
+.custom-dropdown{
+    position: relative;
+    display: flex;
+}
+.custom-dropdown .down {
+    position: absolute;
+    right: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #9c9c9c;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ========== Login page css ========== */
+.bgimg {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bgimg:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000000ad;
+}
+section.signup-sec {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* ============= Step form css start ============= */
+section.step_sec {
+    padding: 60px 0;
+    background: #f3f3f3;
+}
+#msform {
+    position: relative;
+}
+#msform fieldset {
+    background: #1b1b1bb8;
+    border: 1px solid #1b1b1bb8;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    padding: 20px 20px 20px;
+    text-align: right;
+}
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform .action-button, #msform .action-button-previous {
+    background: #d52027;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 4px;
+    min-width: 100px;
+    display: inline-block;
+}
+#msform .next.action-button:hover{
+    background: #a71318;
+    transition: .5s;
+}
+#msform .previous.action-button {
+    background: #636363;
+    margin-right: 10px;
+}
+#msform .previous.action-button:hover{
+    background: #383737;
+    transition: .5s;
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+select.list-dt:focus {
+    border-bottom: 1px solid #db1616;
+}
+.step-form {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+    font-size: 16px;
+}
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+#progressbar {
+    /*margin-bottom: 30px;*/
+    margin: 0 -7% 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+#progressbar .active {
+    color: #d52027;
+}
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+#progressbar .stepNo:before {
+    font-family: FontAwesome;
+    content: "\f023"
+}
+#progressbar .company:before {
+    font-family: FontAwesome;
+    content: "\f1ad"
+}
+#progressbar .address:before {
+    font-family: FontAwesome;
+    content: "\f041"
+}
+#progressbar .contact:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+#progressbar .finish:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #db1616;
+}
+#progressbar li:first-child::after {
+    width: 50%;
+    left: 50%;
+}
+#progressbar li:last-child::after {
+    width: 50%;
+}
+
+
+.radio-group {
+    position: relative;
+    margin-bottom: 25px
+}
+
+.radio {
+    display: inline-block;
+    width: 204;
+    height: 104;
+    border-radius: 0;
+    background: lightblue;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px
+}
+
+.radio:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+}
+
+.radio.selected {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+}
+
+ul.service_list li {
+    display: grid;
+    color: #db1616;
+    font-family: Spantaran;
+    line-height: 21px;
+        text-align: center;
+    font-size: 17px;
+}
+ul.service_list li span {
+    display: grid;
+    color: #000;
+    font-family: Poppins-Medium;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+ul.selected_vehicle li {
+    text-align: center;
+    margin-right: 15px;
+    color: #363636;
+    font-size: 13px;
+}
+ul.selected_vehicle li span {
+    color: #363636;
+    font-size: 16px;
+}
+
+.signup-sec .form-group label{
+    font-family: MyriadProRegular;
+    font-size: 16px;
+    color: #fff;
+}
+.signup-sec .form-control {
+    font-family: MyriadProRegular;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+.signup-sec .form-control option {
+    color: #000;
+}
+.signup-sec p{
+    font-family: MyriadProRegular;
+    font-size: 16px;
+}
+.text-underline{
+    text-decoration: underline;
+}
+.text-underline:hover{
+    text-decoration: none;
+}
+
+/* -------- Page load css start -------- */
+.page-loader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(360deg,#383836 10%,#4a4a4a 360%);
+    z-index: 1000;
+}
+.page-loader .txt,
+.page-loader .loading-img{
+    color: #bbb;
+    text-align: center;
+    top: 44%;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    line-height: 1.5;
+    font-family: inherit;
+}
+.login-admin-link {
+    position: absolute;
+    right: 20px;
+    top: 65px;
+}
+
+@media (max-width: 767px){
+#progressbar {
+    margin: 0 -3% 30px;
+}
+.login-box {
+    padding: 20px;
+}
+}
+

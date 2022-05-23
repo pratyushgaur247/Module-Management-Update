@@ -49,7 +49,7 @@ class CategoryController extends Controller{
             'name' => $request->name,
         ];
         Category::create($data);
-        session()->flash('success', 'Category has been added successfully.');
+        session()->flash('success',__('categoryCreate'));
         if(auth()->guard('admin')->check()){
             return redirect()->route('category.index');
         }else{

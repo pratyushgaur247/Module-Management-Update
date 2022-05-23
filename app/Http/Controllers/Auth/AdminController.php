@@ -5,11 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Admin;
+
 use Auth;
 use Redirect;
-
+use App\Services\Admin\LoginServices;
 class AdminController extends Controller
 {
        /*
@@ -31,14 +30,18 @@ class AdminController extends Controller
      * @var string
      */
     protected $redirectTo = '/dashboard';
+    protected $LoginServices ;
+
+
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(){
+    public function __construct(LoginServices $LoginServices){
         $this->middleware('guest')->except('logout');
+        $this->LoginServices = $LoginServices;
     }
 
     public function getLoginForm()
@@ -47,19 +50,19 @@ class AdminController extends Controller
     }
 
     public function login(Request $request){
-        $userData = Admin::where('email', $request->email)->where('menuroles','admin')->first();
+        $userData =$this->LoginServices->login($request);
         if(isset($userData)){
             $credentials = $request->only('email', 'password');
             if(Auth::guard('admin')->attempt($credentials)){
-                $request->session()->flash('success', 'You have logged in successfully.');
-                return redirect('/admin/dashboard');
+                
+                return redirect('/admin/dashboard')->with('success', __('successfullyLogin'));
             }else{
-                return Redirect::back()->withErrors( [ 'email' => 'Your credentials does not match.' ] );
+                return Redirect::back()->withErrors( [ 'email' => __('credentialsError') ] );
             }
         }else{
-            return Redirect::back()->withErrors( [ 'status' => 'Your account is not activated yet, Admin will activate your account soon.' ] );
+            return Redirect::back()->withErrors( [ 'status' => __('accountStatusError') ] );
         }   
-        Redirect::back()->withErrors( [ 'status' => 'Your credentials does not match. or Your account is not activated.' ] ); 
+        Redirect::back()->withErrors( [ 'status' => __('credentialsOrAccount') ] ); 
     }
 
     public function logout(){

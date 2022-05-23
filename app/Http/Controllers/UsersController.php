@@ -6,12 +6,14 @@ use Auth;
 Use Redirect;
 use Illuminate\Http\Request;
 use App\Http\Requests\{UserRegistrationRequest, UserRegistrationUpdateRequest};
+use App\Services\Admin\UserServices;
 use App\Services\AdminServices;
 class UsersController extends Controller
 {
+    protected $userServices;
     protected $adminServices;
 
-    public function __construct(AdminServices $adminServices)
+    public function __construct(UserServices $userServices, AdminServices $adminServices) 
     {
         $this->middleware('permission:user-section');
         $this->middleware('permission:user-index', ['only'=>['index']]);   
@@ -19,6 +21,7 @@ class UsersController extends Controller
         $this->middleware('permission:user-edit', ['only'=>['edit', 'update']]);
         $this->middleware('permission:user-destroy', ['only'=>['destroy']]);
         $this->middleware('permission:user-proxy',  ['only'=>['proxyLogin']]);
+        $this->userServices  = $userServices;
         $this->adminServices  = $adminServices;
     }
 
@@ -28,19 +31,19 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request){
-        $users = $this->adminServices->getAdminUserIndex($request);
+        $users = $this->userServices->getAdminUserIndex($request);
         return view('dashboard.admin.usersList', compact('users'));
     }
     
     public function create(){
-        $roles = $this->adminServices->getRolesName();
+        $roles = $this->userServices->getRolesName();
         return view('dashboard.admin.userAdd',compact('roles'));
     }
 
     public function store(UserRegistrationRequest $request){
         /* ========== User Table ========== */
-        $this->adminServices->storeUser($request);
-        $request->session()->flash('success', 'User has been registered successfully.');
+        $this->userServices->storeUser($request);
+        $request->session()->flash('success', __('userRegister'));
         if(auth()->guard('admin')->check()){
             return redirect()->route('users.index');
         }else{
@@ -67,7 +70,7 @@ class UsersController extends Controller
      */
     public function edit($id){
         if($id > 0){
-            $data = $this->adminServices->getUserEdit($id);
+            $data = $this->userServices->getUserEdit($id);
             $user = $data['user'];
             $roles = $data['roles'];
             return view('dashboard.admin.userEditForm', compact('user','roles'));
@@ -83,12 +86,11 @@ class UsersController extends Controller
      */
     public function update(UserRegistrationUpdateRequest $request, $id){
         /* ========== User Table ========== */
-        $this->adminServices->getUserUpdate($request,$id);
-        $request->session()->flash('success', 'User profile updated successfully.');
+        $this->userServices->getUserUpdate($request,$id);
         if(auth()->guard('admin')->check()){
-            return redirect()->route('users.index');
+            return redirect()->route('users.index')->with('success', __('userUpdate'));;
         }else{
-            return redirect()->to('/users');   
+            return redirect()->to('/users')->with('success', __('userUpdate'));;   
         }
     }
 
@@ -100,10 +102,10 @@ class UsersController extends Controller
      */
     public function destroy($id){
         if($id > 0){
-            if($this->adminServices->deleteUser($id)){
-                session()->flash('danger', 'User profile has been deleted successfully.');
+            if($this->userServices->deleteUser($id)){
+                session()->flash('danger', __('userProfileDelete'));
             }else{
-                session()->flash('danger', 'User Not Found to Delete');
+                session()->flash('danger', __('userNotFoundDelete'));
             }
             if(auth()->guard('admin')->check()){
                 return redirect()->route('users.index');
@@ -114,10 +116,10 @@ class UsersController extends Controller
     }
 
     public function status($id) {
-        if($user = $this->adminServices->changeStatus($id)){
-            return response()->json(['status'=>'success','message'=>'User Rejected','type'=>'deactivate']);
+        if($user = $this->userServices->changeStatus($id)){
+            return response()->json(['status'=>'success','message'=>__('userRejected'),'type'=>'deactivate']);
         }else{
-            return response()->json(['status'=>'success','message'=>'User Approved','type'=>'activate']);
+            return response()->json(['status'=>'success','message'=>__('userApproved'),'type'=>'activate']);
         }
     }
 }

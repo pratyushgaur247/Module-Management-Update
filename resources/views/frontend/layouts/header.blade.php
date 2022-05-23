@@ -29,12 +29,7 @@
 			<div class="collapse navbar-collapse" id="navbarCollapse" style="display: none;">
 			@endif
 			    <ul class="navbar-nav ml-auto"> 
-					{{-- INSERT DYNAMIC PAGES START --}}
-					@forelse($allPage as $page)
-						<li class="nav-item"><a class="nav-link" href="{{ url('page', [$page->slug]) }}">{{ $page->title }}</a></li>
-					@empty
-						<li></li>
-					@endforelse
+					
 					{{-- INSERT DYNAMIC PAGES END --}}
 					@if(!auth()->guard('web')->check())
 						@if(!auth()->guard('admin')->check())

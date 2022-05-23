@@ -1,0 +1,20 @@
+{
+    "userPassowrdChanged":"Password Changed Successfully.",
+    "oldPasswordMatchError":"Old Password does not match.",
+    "userProfileUpdate":"Your profile has been updated successfully.",
+    "userRegister":"User has been registered successfully.",
+    "userUpdate":"User profile updated successfully.",
+    "userProfileDelete":"User profile has been deleted successfully.",
+    "userNotFoundDelete":"User Not Found to Delete.",
+    "userRejected":"User Rejected",
+    "userApproved":"User Approved",
+    "successfullyLogin":"You have Successfully Login.",
+    "credentialsError":"Your credentials does not match.",
+    "accountStatusError":"Your account is not activated yet, Admin will activate your account soon.",
+    "credentialsOrAccount":"Your credentials does not match. or Your account is not activated.",
+    "categoryCreate":"Category has been added successfully.",
+    "adminPassowrdChanged":"Admin Password Changed Successfully.",
+    "pageCreate":"Page created successfully.",
+    "roleInserted":"Role Inserted Successfully!",
+    "roleUpdated":"Role Updated Successfully!"
+}

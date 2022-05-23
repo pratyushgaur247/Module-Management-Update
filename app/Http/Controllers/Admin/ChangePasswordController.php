@@ -37,9 +37,9 @@ class ChangePasswordController extends Controller{
         // ]);
         
         if ($this->adminServices->changePassword($request)) {
-            $request->session()->flash('success', 'Admin Password Changed Successfully.');
+            $request->session()->flash('success', __('adminPassowrdChanged'));
         } else {
-            $request->session()->flash('danger', 'Old Password does not match.');
+            $request->session()->flash('danger', __('oldPasswordMatchError'));
         }
         return redirect()->route('change-password.index'); 
         

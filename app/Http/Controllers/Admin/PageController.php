@@ -91,7 +91,7 @@ class PageController extends Controller{
     public function update(Request $request, $id)
     {
         $this->pageServices->update($request,$id);
-        $request->session()->flash('success', 'Page updated successfully.');
+        $request->session()->flash('success', __('pageUpdate'));
         if( auth()->guard('admin')->check() ){
             return redirect()->route('page.index');
         }else{
@@ -109,7 +109,7 @@ class PageController extends Controller{
     public function destroy($id)
     {
         $this->pageServices->destroy($id);
-        session()->flash('danger', 'Page deleted successfully.');
+        session()->flash('danger', __('pageDelete'));
         if( auth()->guard('admin')->check() ){
             return redirect()->route('page.index');
         }else{
@@ -130,7 +130,7 @@ class PageController extends Controller{
     public function status(Request $request){
         if($request->ajax()){
             $status = $this->pageServices->status($request);
-            return response()->json(['status'=>'success','statusChange'=>$status,'message'=>'Successfully Updated']);
+            return response()->json(['status'=>'success','statusChange'=>$status,'message'=> __('successfullyUpdated')]);
         }
     }
     

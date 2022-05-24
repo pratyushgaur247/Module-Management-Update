@@ -15,6 +15,10 @@
     "categoryCreate":"Category has been added successfully.",
     "adminPassowrdChanged":"Admin Password Changed Successfully.",
     "pageCreate":"Page created successfully.",
+    "pageUpdate":"Page updated successfully.",
+    "pageDelete":"Page Deleted successfully.",
+    "successfullyUpdated":"Successfully Updated",
     "roleInserted":"Role Inserted Successfully!",
     "roleUpdated":"Role Updated Successfully!"
+    
 }
